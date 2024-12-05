@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/tailwind-output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <title>CRUD Usuarios</title>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto p-5">
+    <h1 class="text-2xl font-bold text-center mb-5">CRUD Usuarios</h1>
+    <div id="app" class="space-y-5">
+      <!-- Formulario para crear usuario -->
+      <form id="userForm" class="space-y-3">
+        <input id="username" type="text" placeholder="Username" class="w-full p-2 border border-gray-300 rounded" required>
+        <input id="displayName" type="text" placeholder="Display Name" class="w-full p-2 border border-gray-300 rounded" required>
+        <button type="submit" class="bg-blue-500 text-white px-3 py-2 rounded">Crear Usuario</button>
+      </form>
+
+      <!-- Tabla para mostrar usuarios -->
+      <table class="table-auto w-full border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="border border-gray-300 p-2">ID</th>
+            <th class="border border-gray-300 p-2">Username</th>
+            <th class="border border-gray-300 p-2">Display Name</th>
+            <th class="border border-gray-300 p-2">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="userTable">
+          <!-- Filas generadas dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
